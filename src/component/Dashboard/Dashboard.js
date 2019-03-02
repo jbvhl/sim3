@@ -18,10 +18,10 @@ export default class Dashboard extends Component {
         });
     }
 
-    search() {
-        const title = this.state.title
-        axios.get('')
-    }
+    // search() {
+    //     const title = this.state.title
+    //     axios.get('/api/posts').then()
+    // }
 
     render() {
         return (

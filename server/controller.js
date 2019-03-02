@@ -27,6 +27,7 @@ module.exports = {
     },
 
     login: async (req, res) => {
+        console.log('meep')
         const {username, password} = req.body;
         const {session} = req;
         const db = req.app.get('db');
@@ -62,12 +63,13 @@ module.exports = {
     },
 
     logout: (req, res) => {
+        console.log('meep2')
         req.session.destroy();
         res.sendStatus(200);
     },
 
     getPosts: (req, res) => {
-        const {posts} = req.session
+        const {posts} = req.session;
         res.status(200).send(posts);
     }
 }
